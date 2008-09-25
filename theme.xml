@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<theme>
+        <name>Closure</name>
+        <author>Sebastian Pascu</author>
+        <url>http://ic3berg.de/</url>
+        <version>1.0</version>
+        <template_engine>rawphpengine</template_engine>
+				<description>Formal theme</description>
+				<license url="http://www.apache.org/licenses/LICENSE-2.0.html">Apache Software License 2.0</license>
+</theme>

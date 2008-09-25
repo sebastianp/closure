@@ -1,0 +1,266 @@
+/*
+   style.css
+   Closure - Habari theme
+   
+   Created by Sebastian Pascu <sebi@ic3berg.de> on 2008-09-13.
+   Copyright 2008 Ic3berg.de. All rights reserved.
+*/
+
+/*
+  IMPORTANT: scroll down to links section and update the domain with yours
+*/
+
+
+/* ================= */
+/* = Some defaults = */
+/* ================= */
+* { margin:0; padding: 0; outline: none; border: 0;}
+
+body {
+	background: #979d91 url(images/background.png) top left repeat-x;
+	min-width: 776px;
+	font-family: "Segoe UI", Verdana, Helvetica, "Lucida Grande", Arial, sans-serif;
+	font-size: 0.8em;
+	font-size: 12px;
+	color: #333;
+}
+
+/* ========== */
+/* = Layout = */
+/* ========== */
+
+#container {
+	margin: 0 auto;
+	width:776px;
+}
+
+#header, #thinbox-body, #thinbox-footer, #page, #footer {
+	width: 776px;
+}
+
+#header {
+	height: 230px;
+	width: 741px;
+	background: #979d91 url(images/header.png) top left no-repeat;
+	padding: 15px 0 0 35px;
+}
+
+#header-photo {
+  width: 751px;
+  height: 177px;
+  margin: 8px 0 0 -22px;
+  background: #3c444d;
+}
+
+#thinbox-body {
+	background: #979d91 url(images/thinbox-body.png) top left repeat-y;
+	width: 761px;
+	padding: 5px 0 0 13px;
+}
+
+#thinbox-body #more-info {
+  display: none;
+	margin: 6px 0 0 0;
+	padding: 8px;
+	width: 736px;
+	color: #fff;
+}
+#thinbox-body ul {
+  margin-left: 15px;
+}
+#thinbox-body ul, #thinbox-body li {
+	list-style: none;
+	display: inline;
+}
+
+#thinbox-body li {
+	padding-left: 15px;
+	color: #979d91;
+}
+
+#thinbox-body li:first-child {
+	padding-left: 0;
+}
+
+#thinbox-body li a, #thinbox-body li a:visited {
+	color: #979d91;
+  border: 0;
+	font-weight: bold;
+}
+
+#thinbox-body li a:hover, #thinbox-body li a:focus {
+	color: #3c444d;
+	font-weight: bold;
+}
+
+#thinbox-footer {
+	height: 5px;
+	background: #979d91 url(images/thinbox-footer.png) top left no-repeat;
+}
+
+/* actual content */
+#page {
+  min-height: 230px; /* just for fun */
+	background: #979d91 url(images/body.png) top left repeat-y;
+	padding-left: 25px;
+	padding-right: 15px;
+	padding-top: 15px;
+	width: 736px;
+}
+
+#sidebar {
+	float: right;
+}
+#darkbox, #lightbox {
+	width: 241px;
+}
+
+/* sidebar - dark colored box */
+#darkbox-header {
+	background: #979d91 url(images/darkbox-header.png) top left no-repeat;
+	height: 8px;	
+}
+#darkbox-body {
+	width: 226px;
+	padding: 0 0 0 15px;
+	background: #979d91 url(images/darkbox-body.png) top left repeat-y;
+}
+#darkbox-footer {
+	background: #979d91 url(images/darkbox-footer.png) top left no-repeat;
+	height: 12px;	
+}
+
+/* sidebar - light colored box */
+#lightbox-header {
+	background: #979d91 url(images/lightbox-header.png) top left no-repeat;
+	height: 10px;	
+}
+#lightbox-body {
+	width: 226px;
+	padding: 0 0 0 15px;
+	background: #979d91 url(images/lightbox-body.png) top left repeat-y;
+}
+#lightbox-footer {
+	background: #979d91 url(images/lightbox-footer.png) top left no-repeat;
+	height: 13px;	
+}
+
+/* page navigation */
+#pagenav {
+  width: 600px; text-align: center;
+  margin: 0 auto;/* just to center this div */
+}
+
+#pagenav a, #pagenav a:hover, #pagenav a:focus, #pagenav a:visited {
+  border: 0;
+}
+.current-page {
+  padding: 3px;
+  font-weight: bold;
+}
+
+.prev-page, .next-page {
+  padding: 3px;
+}
+
+
+/* footer */
+#footer {
+	height: 37px;
+	background: #979d91 url(images/footer.png) top left repeat-y;
+}
+
+#footer-content {
+	width: 600px;
+	margin: 0 auto;
+	text-align: center;
+	border-top: 1px dotted #979d91;
+}
+
+/* ============== */
+/* = Typography = */
+/* ============== */
+
+/* post body only */
+div.post { 
+  padding-bottom: 30px;
+}
+div.post p + p {
+  text-indent: 1em;
+  margin-top: 0.5em;
+}
+div.post ul{
+  margin: 0 0 15px 35px;
+}
+
+/* spacing and style */
+.left-border {padding: 0 0 0 15px; border-left: 10px solid #aaa;}
+.bottom-border {border-bottom: 1px solid;}
+.post-title {padding: 2px;}
+
+div.post-meta {
+	color: #3c444d;
+	font-size: 0.5em;
+	background: #979d91;
+	padding: 2px;
+	margin-bottom: 1em;
+	margin-right: 10px;
+}
+
+/* colors & others */
+.white { color: #fff }
+.dark-gray { color: #3c444d }
+.light-gray { color: #979d91 }
+.inline {display: inline}
+.no-list-style {list-style: none;}
+.hidden {display: none;}
+.pad2 {padding: 2px;}
+.border1 {border: 1px solid;}
+.margin-l10 {margin-left: 10px;}
+
+/* font styles */
+.sans { font-family: "Segoe UI", Verdana, Arial, Helvetica, sans-serif; }
+.serif { font-family: Georgia, Courier, serif; }
+
+/* external links - only valid for post body */
+div.post a[href^="http://"], div.post a[href^="http:"]:visited {
+  background: url(images/external-link.gif) center right no-repeat;
+  padding-right: 14px;
+}
+div.post a[href^="http://"]:hover, div.post a[href^="http:"]:focus {
+  background: #ddd url(images/external-link.gif) center right no-repeat;
+  padding-right: 14px;
+  text-decoration: none; border-bottom: 1px solid #3c444d; color: #3A63DE;
+}
+
+/* links */
+/* IMPORTANT: replace 'localhost' with your domain(or host.domain) name */
+div.post a[href^="http://localhost/"], 
+div.post a[href^="http://localhost/"]:visited,
+a,
+a:visited { 
+  text-decoration: none; 
+  border-bottom: 1px solid #3c444d; 
+  color: #0565CA;
+  background: transparent;
+  padding: 0;
+}
+
+div.post a[href^="http://localhost/"]:hover, 
+div.post a[href^="http://localhost/"]:focus, 
+a:hover, 
+a:focus { 
+  text-decoration: none; 
+  border-bottom: 1px solid #3c444d; 
+  color: #3A63DE;
+  background: #ddd;
+  padding: 0;
+}
+
+#page h1 a, #page div.post-meta a {
+  border-bottom: 0;
+}
+
+#page h1 a {
+  color: #3c444d;
+}
