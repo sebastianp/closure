@@ -6,4 +6,4 @@
     <a href="user/logout">Logout.</a>
   </li>
 <?php } ?>
-</uL>
+</ul>
