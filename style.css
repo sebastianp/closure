@@ -210,11 +210,13 @@ div.post-meta {
 /* colors & others */
 .white { color: #fff }
 .dark-gray { color: #3c444d }
+.cool-blue {color: #3A63DE;}
 .light-gray { color: #979d91 }
 .inline {display: inline}
 .no-list-style {list-style: none;}
 .hidden {display: none;}
 .pad2 {padding: 2px;}
+.pad10l {padding-left: 10px;}
 .border1 {border: 1px solid;}
 .margin-l10 {margin-left: 10px;}
 
@@ -262,5 +264,5 @@ a:focus {
 }
 
 #page h1 a {
-  color: #3c444d;
+  color: #3A63DE;
 }
