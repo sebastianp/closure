@@ -17,15 +17,15 @@ else {
      <form method="post" action="<?php URL::out( 'user', array( 'page' => 'login' ) ); ?>" id="loginform">
       <p>
        <label for="habari_username"><?php _e('Username:'); ?></label>
-       <input type="text" size="15" name="habari_username" id="habari_username">
+       <input type="text" size="15" name="habari_username" id="habari_username" />
       </p>
       <p>
        <label for="habari_password"><?php _e('Password :'); ?></label>
-       <input type="password" size="15" name="habari_password" id="habari_password">
+       <input type="password" size="15" name="habari_password" id="habari_password" />
       </p>
       <?php Plugins::act( 'theme_loginform_controls' ); ?>
       <p>
-       <input type="submit" value="<?php _e('Sign in'); ?>">
+       <input type="submit" value="<?php _e('Sign in'); ?>" />
       </p>
      </form>
      <?php Plugins::act( 'theme_loginform_after' ); ?>
