@@ -106,6 +106,7 @@ body {
 	padding-right: 15px;
 	padding-top: 15px;
 	width: 736px;
+	overflow: auto;
 }
 
 #sidebar {
@@ -149,6 +150,7 @@ body {
 #pagenav {
   width: 600px; text-align: center;
   margin: 0 auto;/* just to center this div */
+  padding: 5px;
 }
 
 #pagenav a, #pagenav a:hover, #pagenav a:focus, #pagenav a:visited {
@@ -226,21 +228,19 @@ div.post-meta {
 .sans { font-family: "Segoe UI", Verdana, Arial, Helvetica, sans-serif; }
 .serif { font-family: Georgia, Courier, serif; }
 
-/* external links - only valid for post body */
-div.post a[href^="http://"], div.post a[href^="http:"]:visited {
+/* external links */
+/* only the post body gets automatically classified external links */
+a.external-link, a.external-link:visited {
   background: url(images/external-link.gif) center right no-repeat;
   padding-right: 14px;
 }
-div.post a[href^="http://"]:hover, div.post a[href^="http:"]:focus {
+a.external-link:hover, a.external-link:focus {
   background: #ddd url(images/external-link.gif) center right no-repeat;
   padding-right: 14px;
   text-decoration: none; border-bottom: 1px solid #3c444d; color: #3A63DE;
 }
 
 /* links */
-/* IMPORTANT: replace 'localhost' with your domain(or host.domain) name */
-div.post a[href^="http://localhost/"], 
-div.post a[href^="http://localhost/"]:visited,
 a,
 a:visited { 
   text-decoration: none; 
@@ -250,8 +250,6 @@ a:visited {
   padding: 0;
 }
 
-div.post a[href^="http://localhost/"]:hover, 
-div.post a[href^="http://localhost/"]:focus, 
 a:hover, 
 a:focus { 
   text-decoration: none; 
