@@ -6,17 +6,15 @@
 //  Copyright 2008 Ic3berg.de. All rights reserved.
 // 
 
-// update with YOUR domain
-my_domain = "http://localhost";
-
 $(document).ready(
 	function() {
 	  // open external links in new window. first tag with 'new-window' class
 	  // only within div.post, elsewhere the design has priority
-    $("div.post a[href^='http:']").addClass('new-window');
-    // remove class for local links, I'm sure there's a better way
-	  $("div.post a[href^='"+my_domain+"']").removeClass('new-window');
-	  
+    $("div.post a").filter(function(){
+      if(this.hostname && this.hostname!=window.location.hostname)
+        return 1;
+    }).addClass('new-window').addClass("external-link");
+
 	  // next, add on click event to previosly tagged links
 	  $(".new-window").click(
 	    function(){
