@@ -30,7 +30,15 @@ class Ic3berg extends Theme
 	public function add_template_vars()
 	{
 		//Theme Options
-		$this->assign( 'show_author' , true ); //Display author in posts 
+		$this->assign( 'show_author' , true ); //Display author in posts
+		// How many months should be displayed by the RN Archives plugin
+		$this->assign('rn_archives_months', 2);
+		// Links list
+		$this->assign('links_list',
+		  array(
+		    'Follow me on Twitter' => 'http://twitter.com/sebastianp',
+		    )
+		);
 		
 		if( !$this->template_engine->assigned( 'pages' ) ) {
 			$this->assign( 'pages', Posts::get( array( 'content_type' => 'page', 'status' => Post::status( 'published' ), 'nolimit' => 1 ) ) );
@@ -49,7 +57,6 @@ class Ic3berg extends Theme
 		if( !$this->template_engine->assigned( 'archives' ) ) {
 			$this->assign( 'archives', Posts::get( array( 'content_type' => 'entry', 'status' => Post::status( 'published' ) ) ) );
 		}
-		
 		
 		parent::add_template_vars();
 	}
