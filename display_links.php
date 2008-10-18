@@ -2,7 +2,7 @@
   <?php
     if($theme->links_list) {
       foreach($theme->links_list as $link_text => $link) {
-        echo "<li><a href=\"".$link."\">".$link_text."</a></li>";
+        echo "<li><a href=\"".$link."\" title=\"$link_text\">".$link_text."</a></li>";
       }
     } else {
       ?>
