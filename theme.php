@@ -48,6 +48,11 @@ class Ic3berg extends Theme
 		if( !$this->template_engine->assigned( 'latest_posts' ) ) {
 			$this->assign( 'latest_posts', Posts::get( array( 'content_type' => 'entry', 'status' => Post::status( 'published' ), 'limit' => 5 ) ) );
 		}
+
+		// Fetch the last 5 comments, for displaying in the quickbar
+		if( !$this->template_engine->assigned( 'latest_comments' ) ) {
+			$this->assign( 'latest_comments', Comments::get( array('status' => Comment::STATUS_APPROVED) ) );
+		}
 		
 		if( !$this->template_engine->assigned( 'taglist' ) ) {
 			$this->assign( 'taglist', $this->theme_show_tags() );
@@ -61,6 +66,23 @@ class Ic3berg extends Theme
 		parent::add_template_vars();
 	}
 
+  public function custom_comment_class( $comment, $post )
+	{
+		$class = 'class="comment';
+		if ( $comment->status == Comment::STATUS_UNAPPROVED ) {
+			$class.= '-unapproved';
+		}
+		// check to see if the comment is by a registered user
+		if ( $u = User::get( $comment->email ) ) {
+			$class.= ' by-user comment-author-' . Utils::slugify( $u->displayname );
+		}
+		if( $comment->email == $post->author->email ) {
+			$class.= ' by-post-author';
+		}
+
+		$class.= '"';
+		return $class;
+	}
 	public function filter_theme_call_header( $return, $theme )
 	{
 		if ( User::identify() != FALSE ) {
