@@ -29,12 +29,20 @@ $(document).ready(
 	  // slide the #thinbox-body div
     $("#toggle-more-info").toggle(
       function(){
-        $(this).html("☒");
         $("#more-info").slideDown(300);
       },
       function(){
-        $(this).html("✚");
         $("#more-info").slideUp(300);
+      }
+    );
+    
+    // comment form animation
+    $("#respond").toggle(
+      function(){
+        $("#comment-form").slideDown(300);
+      },
+      function(){
+        $("#comment-form").slideUp(300);
       }
     );
 	}
