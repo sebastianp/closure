@@ -23,31 +23,38 @@
 		<div id="header">
 			<h1 class="white"><?php Options::out( 'title' ) ?></h1>
 			<h4 class="light-gray"><?php Options::out('tagline') ?> </h4>
-			<div id="header-photo">
-			 <img id="header-slideshow" src="<?php Site::out_url( 'theme' ); ?>/images/header-photos/1.png" alt="" width="751" height="177" />
-			</div>
+      <!-- slideshow coming in next revision -->
+      <!-- <div id="header-photo">
+       <img id="header-slideshow" src="<?php Site::out_url( 'theme' ); ?>/images/header-photos/1.png" alt="" width="751" height="177" />
+      </div> -->
 		</div>
 		<!-- end header -->
 		
 		<!-- menu / thinbox -->
 		<div id="thinbox">
 			<div id="thinbox-body">
-			  <div style="float: right; margin-right: 20px"><span class="light-gray" style="cursor: pointer" id="toggle-more-info">✚</span></div>
+			  <div style="float: right; margin-right: 20px"><span class="light-gray" style="cursor: pointer" id="toggle-more-info"><img src="<?php echo Site::out_url('theme') ?>/images/comment.png" style="border: 0"></span></div>
 			  <ul id="menu">
 			    <li><a href="<?php Site::out_url( 'habari' ); ?>">Home</a></li>
     			<?php foreach ( $pages as $page ): ?>
     		    <li><a href="<?php echo $page->permalink; ?>" title="<?php echo $page->title; ?>"><?php echo $page->title; ?></a></li>
     			<?php endforeach; ?>
-			  </ul>
-			  <div id="more-info">
-    			<h2>Latest posts</h2>
-    			<ul>
-    				<?php foreach ( $latest_posts as $entry ): ?>
-    				<li><a href="<?php echo $entry->permalink ?>" title="<?php echo $entry->title ?>"><?php echo $theme->filter_post_title_excerpt($entry->title_out) ?></a> on <?php echo Format::nice_date( $entry->pubdate )?></li>
+        </ul>
+        <div id="more-info">
+          <h2>Latest comments</h2>
+    				<?php foreach ( $latest_comments as $comment ): ?>
+    				  <div id="latest-comment-<?php echo $comment->id ?>" class="latest-comment">
+              <?php $author = $comment->url=="" ? $comment->name : "<a href=\"".$comment->url."\" title=\"".$comment->url."\">".$comment->name."</a>" ?>
+  				    <?php echo "<strong>".$author."</strong> left a reply about <a href=\"".$comment->post->permalink."\" title=\"".$comment->post->title_out."\">".$comment->post->title."</a> on " ?>
+              <?php echo $comment->date->out('F j, Y g:ia') ?>
+              (<a href="#" onClick="javascript:$('#latest-comment-content-<?php echo $comment->id ?>').toggle()">show/hide</a>)
+              <div class="latest-comment-content" id="latest-comment-content-<?php echo $comment->id?>">
+                <?php echo $comment->content_out ?>
+              </div>
+              </div>
     				<?php endforeach; ?>
-    			</ul>
-			  </div> <!-- end #more-info -->
-			</div> <!-- end thinbox-body -->
-			<div id="thinbox-footer"></div>
-		</div>
-		<!-- end thinbox -->
+        </div> <!-- end #more-info -->
+      </div> <!-- end thinbox-body -->
+      <div id="thinbox-footer"></div>
+    </div>
+    <!-- end thinbox -->
