@@ -68,7 +68,7 @@ body {
 #thinbox-body ul {
   margin-left: 15px;
 }
-#thinbox-body ul, #thinbox-body li {
+#thinbox-body ul#menu, #thinbox-body ul#menu li {
 	list-style: none;
 	display: inline;
 }
@@ -91,6 +91,18 @@ body {
 #thinbox-body li a:hover, #thinbox-body li a:focus {
 	color: #3c444d;
 	font-weight: bold;
+}
+
+#thinbox-body .latest-comment {
+  margin-left: 15px;
+  color: #979d91;
+}
+
+#thinbox-body .latest-comment-content {
+  padding-left: 15px;
+  margin: 0 20px 20px 5px;
+  border-left: 3px solid #979d91;
+  display: none;
 }
 
 #thinbox-footer {
@@ -213,6 +225,49 @@ div.post-meta {
 	padding: 2px;
 	margin-bottom: 1em;
 	margin-right: 10px;
+}
+
+/* comments */
+div.comments {
+  margin-top: 5px;
+}
+
+#comment-form {
+  display: none;
+}
+.comments ol {
+  margin-left: 17px;
+  list-style: none;
+}
+.comments li {
+  list-style: none;
+  margin: 5px;
+}
+
+.comments input, .comments textarea {
+  padding: 2px;
+  margin: 2px;
+  border: 1px solid #999;
+}
+
+.commentsrsslink {
+  font-weight: normal;
+}
+
+.comment-content {
+  margin: 5px 5px 5px 0;
+  padding: 5px;
+  border-left: 3px solid #ccc;
+}
+li.comment {
+  padding: 1px;
+  margin-bottom: 15px;
+}
+li.by-user {
+  background: #eee;
+}
+li.by-post-author {
+  background: #D6ECF5;
 }
 
 /* colors & others */
