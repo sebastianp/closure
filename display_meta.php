@@ -8,6 +8,7 @@ if ( isset( $error ) && ( $error == 'Bad credentials' ) ) {
 if ( isset( $user ) && ( $user instanceOf User ) ) {
 ?>
   <?php _e('Logged in as'); ?> <a href="<?php URL::out( 'admin', 'page=user&user=' . $user->username ) ?>" title="<?php _e('Edit Your Profile'); ?>"><?php echo $user->username; ?></a>.<br />
+  <?php _e('Go to ') ?><a href="<?php URL::out('admin') ?>">Dashboard</a><br />
   <a href="<?php Site::out_url( 'habari' ); ?>/user/logout"><?php _e('Logout'); ?></a>?
 <?php
 }
