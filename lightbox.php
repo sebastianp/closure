@@ -1,3 +1,4 @@
+<div style="width: 96%">
 <h3>Archives</h3>
 <div id="archives" class="pad10l">
   <?php include('display_archives.php') ?>
@@ -13,3 +14,4 @@
   <?php include('display_meta.php') ?>
 </div>
 
+</div>

@@ -5,8 +5,10 @@
 </form>
 
 <h3 class="white">Tags</h3>
+<div style="width: 96%">
 <ul class="inline no-list-style">
 <?php foreach( $taglist as $tag ): ?>
 	<li class="inline"><a href="<?php echo $tag->url; ?>" title="<?php echo $tag->text; ?>" rel="tag"><?php echo $tag->text; ?></a></li>
 <?php endforeach; ?>
 </ul>
+</div>
