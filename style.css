@@ -303,6 +303,7 @@ a:visited {
   color: #0565CA;
   background: transparent;
   padding: 0;
+  margin-bottom: 1px;
 }
 
 a:hover, 
@@ -312,6 +313,7 @@ a:focus {
   color: #3A63DE;
   background: #ddd;
   padding: 0;
+  margin-bottom: 1px;
 }
 
 #page h1 a, #page div.post-meta a {
