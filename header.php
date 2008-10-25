@@ -33,7 +33,7 @@
 		<!-- menu / thinbox -->
 		<div id="thinbox">
 			<div id="thinbox-body">
-			  <div style="float: right; margin-right: 20px"><span class="light-gray" style="cursor: pointer" id="toggle-more-info"><img src="<?php echo Site::out_url('theme') ?>/images/comment.png" style="border: 0"></span></div>
+			  <div style="float: right; margin-right: 20px"><span class="light-gray" style="cursor: pointer" id="toggle-more-info"><img src="<?php echo Site::out_url('theme') ?>/images/comment.png" alt="show recent comments" style="border: 0" /></span></div>
 			  <ul id="menu">
 			    <li><a href="<?php Site::out_url( 'habari' ); ?>">Home</a></li>
     			<?php foreach ( $pages as $page ): ?>
