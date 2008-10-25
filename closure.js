@@ -10,7 +10,7 @@ $(document).ready(
 	function() {
 	  // open external links in new window. first tag with 'new-window' class
 	  // only within div.post, elsewhere the design has priority
-    $("div.post a").filter(function(){
+    $("#page a").filter(function(){
       if(this.hostname && this.hostname!=window.location.hostname)
         return 1;
     }).addClass('new-window').addClass("external-link");
