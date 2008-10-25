@@ -2,8 +2,6 @@
 <?php
 if ( ! defined('HABARI_PATH' ) ) { die( _t('Please do not load this page directly. Thanks!') ); }
 ?>
-    <hr>
-    
     <div class="comments">
      <h4><span id="comments"><?php echo $post->comments->moderated->count; ?> <?php _e('responses to this post'); ?></span> (<span class="commentsrsslink"><a href="<?php echo $post->comment_feed_link; ?>" title="comments atom feed"><?php _e('atom feed'); ?></a></span>)</h4>
 
@@ -34,8 +32,5 @@ else { ?>
      </ul>
 
 <?php if ( ! $post->info->comments_disabled ) { include_once( 'commentform.php' ); } ?>
-
-     <hr>
-    
     </div>
 <!-- /comments -->
