@@ -13,6 +13,8 @@
   <script src="<?php Site::out_url( 'theme' ); ?>/scripts/jquery.pngfix.js" type="text/javascript" charset="utf-8"></script>
   <script src="<?php Site::out_url( 'theme' ); ?>/scripts/fixpngs.js" type="text/javascript" charset="utf-8"></script>
   <script type="text/javascript" src="<?php Site::out_url( 'theme' ); ?>/closure.js?v1.1"></script>
+  <script type="text/javascript" src="<?php Site::out_url( 'theme' ); ?>/FancyZoom.js"></script>
+  <script type="text/javascript" src="<?php Site::out_url( 'theme' ); ?>/FancyZoomHTML.js"></script>
   <link rel="stylesheet" href="<?php Site::out_url( 'theme' ); ?>/style.css?v1.1" type="text/css" media="screen" title="Closure" charset="utf-8" />
   <?php $theme->header(); ?>
 </head>
