@@ -17,7 +17,7 @@
   <?php $theme->header(); ?>
 </head>
 
-<body onload="">
+<body onload="setupZoom()">
 	<div id="container">
 		<!-- header -->
 		<div id="header">
