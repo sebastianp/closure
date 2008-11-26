@@ -10,8 +10,6 @@
   <link rel="edit" type="application/atom+xml" title="Atom Publishing Protocol" href="<?php URL::out( 'atompub_servicedocument' ); ?>" />
   <link rel="EditURI" type="application/rsd+xml" title="RSD" href="<?php URL::out( 'rsd' ); ?>" />
   <script type="text/javascript" src="<?php Site::out_url('scripts'); ?>/jquery.js"></script>
-  <script src="<?php Site::out_url( 'theme' ); ?>/scripts/jquery.pngfix.js" type="text/javascript" charset="utf-8"></script>
-  <script src="<?php Site::out_url( 'theme' ); ?>/scripts/fixpngs.js" type="text/javascript" charset="utf-8"></script>
   <script type="text/javascript" src="<?php Site::out_url( 'theme' ); ?>/closure.js?v1.1"></script>
   <script type="text/javascript" src="<?php Site::out_url( 'theme' ); ?>/FancyZoom.js"></script>
   <script type="text/javascript" src="<?php Site::out_url( 'theme' ); ?>/FancyZoomHTML.js"></script>
