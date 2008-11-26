@@ -35,13 +35,13 @@
 // SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 var includeCaption = true; // Turn on the "caption" feature, and write out the caption HTML
-var zoomTime       = 5;    // Milliseconds between frames of zoom animation
+var zoomTime       = 1;    // Milliseconds between frames of zoom animation
 var zoomSteps      = 15;   // Number of zoom animation frames
 var includeFade    = 1;    // Set to 1 to fade the image in / out as it zooms
 var minBorder      = 90;   // Amount of padding between large, scaled down images, and the window edges
 var shadowSettings = '0px 5px 25px rgba(0, 0, 0, '; // Blur, radius, color of shadow for compatible browsers
 
-var zoomImagesURI   = '/images-global/zoom/'; // Location of the zoom and shadow images
+var zoomImagesURI   = '/user/themes/closure/images/zoom/'; // Location of the zoom and shadow images
 
 // Init. Do not add anything below this line, unless it's something awesome.
 
