@@ -6,10 +6,6 @@
    Copyright 2008 Ic3berg.de. All rights reserved.
 */
 
-/*
-  IMPORTANT: scroll down to links section and update the domain with yours
-*/
-
 
 /* ================= */
 /* = Some defaults = */
@@ -118,7 +114,7 @@ background: #979d91 url(images/thinbox-footer.png) top left no-repeat;
 /* actual content */
 #page {
 min-height: 230px; /* just for fun */
-	background: #979d91 url(images/body.png) top left repeat-y;
+background: #979d91 url(images/body.png) top left repeat-y;
 padding-left: 25px;
 padding-right: 15px;
 padding-top: 15px;
@@ -319,6 +315,18 @@ list-style: none;
 display: none;
 }
 
+/*special class for images*/
+.image {
+margin: 4px;
+padding: 2px;
+-webkit-box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.0);
+}
+
+.image-link {
+border: 0;
+text-decoration: none;
+}
+
 /* font styles */
 .sans {
 font-family: "Segoe UI", Verdana, Arial, Helvetica, sans-serif;
@@ -372,15 +380,15 @@ color: #3c444d;
 
 /* quick hacks - waiting another occasion to be cleaned up*/
 input {
-	margin: 2px;
+margin: 2px;
 }
 
 blockquote {
-	border-left: 5px solid #9DA7B3;
-	margin: 1em 0 0 20px;
-	padding-left: 5px;
+border-left: 5px solid #9DA7B3;
+margin: 1em 0 0 20px;
+padding-left: 5px;
 }
 
 pre {
-	font-family: "Consolas", "Courier New", "Courier", monospace;
+font-family: "Consolas", "Courier New", "Courier", mono, serif;
 }
